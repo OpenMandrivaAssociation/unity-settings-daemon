@@ -24,6 +24,7 @@ BuildRequires:  intltool
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
 BuildRequires:  xkeyboard-config
+BuildRequires:  xsltproc
 BuildRequires:  pkgconfig(alsa)
 BuildRequires:  pkgconfig(colord)
 BuildRequires:  pkgconfig(fcitx)
