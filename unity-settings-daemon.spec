@@ -18,6 +18,7 @@ BuildRequires:  accountsservice
 BuildRequires:  pkgconfig(accountsservice)
 BuildRequires:  autoconf
 BuildRequires:  automake
+BuildRequires:  fcitx
 BuildRequires:  gperf
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  intltool
