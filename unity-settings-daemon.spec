@@ -45,7 +45,6 @@ BuildRequires:  pkgconfig(upower-glib)
 BuildRequires:  pkgconfig(xkbfile)
 BuildRequires:  pkgconfig(xorg-wacom)
 BuildRequires:  pkgconfig(xtst)
-%glib2_gsettings_schema_requires
 
 %description
 This package contains the daemon which is responsible for setting
