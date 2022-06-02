@@ -74,6 +74,8 @@ unity-settings-daemon.
 %autosetup -c -p1
 
 %build
+export CC=gcc
+export CXX=g++
 NOCONFIGURE=1 ./autogen.sh
 %configure \
   --libexecdir=%{_libexecdir}/%{name} \
