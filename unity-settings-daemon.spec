@@ -89,7 +89,7 @@ find %{buildroot} -type f -name "*.la" -delete -print
 
 %postun -p /sbin/ldconfig
 
-%files
+%files -f %{name}.lang
 %license COPYING*
 %doc AUTHORS MAINTAINERS
 %{_sysconfdir}/xdg/autostart/unity-fallback-mount-helper.desktop
@@ -103,8 +103,6 @@ find %{buildroot} -type f -name "*.la" -delete -print
 %{_datadir}/icons/hicolor/*/apps/usd-xrandr.*
 %{_datadir}/glib-2.0/schemas/com.canonical.unity.settings-daemon.*.xml
 %{_mandir}/man1/%{name}.1%{?ext_man}
-
-%files lang -f %{name}.lang
 
 %files devel
 %{_includedir}/%{name}-1.0/
