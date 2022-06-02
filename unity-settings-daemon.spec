@@ -1,3 +1,5 @@
+%define _disable_ld_no_undefined 1
+
 %define _version 15.04.1+21.10.20210715
 Name:           unity-settings-daemon
 Version:        15.04.1
