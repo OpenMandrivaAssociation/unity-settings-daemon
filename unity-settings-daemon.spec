@@ -14,6 +14,8 @@ Source:         https://launchpad.net/ubuntu/+archive/primary/+files/%{name}_%{_
 #Patch1:         0002-fix-warnings.patch
 
 BuildRequires:  pkgconfig(packagekit-glib2)
+BuildRequires:  accountsservice
+BuildRequires:  pkgconfig(accountsservice)
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  gperf
