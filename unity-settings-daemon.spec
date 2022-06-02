@@ -7,7 +7,7 @@ License:        GPL-2.0-or-later AND LGPL-2.1-or-later
 Group:          System/GUI/Other
 URL:            https://launchpad.net/unity-settings-daemon
 Source:         https://launchpad.net/ubuntu/+archive/primary/+files/%{name}_%{_version}.orig.tar.gz
-Source1:        %{name}-rpmlintrc
+#Source1:        %{name}-rpmlintrc
 # PATCH-FIX-OPENSUSE 0001-Remove-accountsservice-dependency.patch -- Remove accountsservice dependency.
 #Patch0:         0001-Remove-accountsservice-dependency.patch
 # PATCH-FIX-UPSTREAM 0002-fix-warnings.patch -- Fix some warnings.
