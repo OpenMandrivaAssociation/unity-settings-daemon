@@ -1,0 +1,50 @@
+--- a/gnome-settings-daemon/gsd-rr-config.c
++++ b/gnome-settings-daemon/gsd-rr-config.c
+@@ -1920,6 +1920,7 @@ get_max_texture_size (GsdRRScreen *scree
+ 	    return _max_texture_size_cache;
+ 	}
+     }
++    return 0;
+ }
+ 
+ static CrtcAssignment *
+--- a/plugins/media-keys/gsd-media-keys-manager.c
++++ b/plugins/media-keys/gsd-media-keys-manager.c
+@@ -608,10 +608,12 @@ static char *
+ get_key_string (GsdMediaKeysManager *manager,
+ 		MediaKey            *key)
+ {
+-        if (key->settings_key == "switch-input-source" || key->settings_key == "switch-input-source-backward")
+-	        return g_settings_get_strv (manager->priv->input_settings, key->settings_key)[0];
+-        else if (key->settings_key != NULL)
+-		return g_settings_get_string (manager->priv->settings, key->settings_key);
++        if (key->settings_key != NULL)
++ 		if (g_strcmp0(key->settings_key, "switch-input-source") == 0 || g_strcmp0(key->settings_key, "switch-input-source-backward") == 0) {
++			return g_settings_get_strv (manager->priv->input_settings, key->settings_key)[0];
++		} else {
++			return g_settings_get_string (manager->priv->settings, key->settings_key);
++		}
+ 	else if (key->hard_coded != NULL)
+ 		return g_strdup (key->hard_coded);
+ 	else if (key->custom_path != NULL) {
+--- a/plugins/screensaver-proxy/Makefile.am
++++ b/plugins/screensaver-proxy/Makefile.am
+@@ -48,6 +48,7 @@ usd_test_screensaver_proxy_CFLAGS =			\
+ usd_test_screensaver_proxy_LDADD =						\
+ 	$(top_builddir)/gnome-settings-daemon/libgsd.la		\
+ 	$(top_builddir)/plugins/common/libcommon.la		\
++	$(top_builddir)/gnome-settings-daemon/libunity-settings-daemon.la	\
+ 	$(SETTINGS_DAEMON_LIBS)			\
+ 	$(SETTINGS_PLUGIN_LIBS)
+ 
+--- a/plugins/xrandr/gsd-xrandr-manager.c
++++ b/plugins/xrandr/gsd-xrandr-manager.c
+@@ -2357,7 +2357,7 @@ do_touchscreen_mapping (GsdXrandrManager
+         GsdRROutputInfo *laptop_output;
+ 
+         if (!supports_xinput_devices ())
+-                return;
++                goto out;
+ 
+         current = gsd_rr_config_new_current (screen, NULL);
+         laptop_output = get_mappable_output_info (manager, screen, current);
