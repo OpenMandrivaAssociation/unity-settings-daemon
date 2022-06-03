@@ -19,6 +19,8 @@ BuildRequires:  pkgconfig(packagekit-glib2)
 #BuildRequires:  accountsservice
 #BuildRequires:  pkgconfig(accountsservice)
 BuildRequires:  docbook-utils
+BuildRequires:  docbook2x
+BuildRequires:  docbook-xsl
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  fcitx
