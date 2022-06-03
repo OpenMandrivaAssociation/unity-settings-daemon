@@ -114,7 +114,7 @@ find %{buildroot} -type f -name "*.la" -delete -print
 %{_datadir}/polkit-1/actions/com.ubuntu.%{name}.plugins.*.policy
 %{_datadir}/icons/hicolor/*/apps/usd-xrandr.*
 %{_datadir}/glib-2.0/schemas/com.canonical.unity.settings-daemon.*.xml
-#{_mandir}/man1/%{name}.1%{?ext_man}
+%{_mandir}/man1/unity-settings-daemon.1.*
 
 %files devel
 %{_includedir}/%{name}-1.0/
