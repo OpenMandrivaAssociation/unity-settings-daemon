@@ -13,7 +13,7 @@ Source:         https://launchpad.net/ubuntu/+archive/primary/+files/%{name}_%{_
 # PATCH-FIX-OPENSUSE 0001-Remove-accountsservice-dependency.patch -- Remove accountsservice dependency.
 Patch0:         0001-Remove-accountsservice-dependency.patch
 # PATCH-FIX-UPSTREAM 0002-fix-warnings.patch -- Fix some warnings.
-#Patch1:         0002-fix-warnings.patch
+Patch1:         0002-fix-warnings.patch
 
 BuildRequires:  pkgconfig(packagekit-glib2)
 #BuildRequires:  accountsservice
