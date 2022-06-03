@@ -16,8 +16,8 @@ Patch0:         0001-Remove-accountsservice-dependency.patch
 #Patch1:         0002-fix-warnings.patch
 
 BuildRequires:  pkgconfig(packagekit-glib2)
-BuildRequires:  accountsservice
-BuildRequires:  pkgconfig(accountsservice)
+#BuildRequires:  accountsservice
+#BuildRequires:  pkgconfig(accountsservice)
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  fcitx
