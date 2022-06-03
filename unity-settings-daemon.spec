@@ -18,6 +18,7 @@ Patch1:         0002-fix-warnings.patch
 BuildRequires:  pkgconfig(packagekit-glib2)
 #BuildRequires:  accountsservice
 #BuildRequires:  pkgconfig(accountsservice)
+BuildRequires:  docbook-utils
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  fcitx
