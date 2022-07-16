@@ -3,7 +3,7 @@
 %define _version 15.04.1+21.10.20210715
 Name:           unity-settings-daemon
 Version:        15.04.1
-Release:        1
+Release:        2
 Summary:        Unity session settings daemon
 License:        GPL-2.0-or-later AND LGPL-2.1-or-later
 Group:          System/GUI/Other
